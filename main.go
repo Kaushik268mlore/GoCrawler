@@ -26,7 +26,8 @@ type star struct {
 func main() {
 	month := flag.Int("month", 1, "Month to fetch birthdays for")
 	day := flag.Int("day", 1, "Day to fetch birthdays for")
-
+	flag.Parse()
+	crawl(*month, *day)
 }
 
 func crawl(month int, day int) {
